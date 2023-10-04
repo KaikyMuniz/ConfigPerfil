@@ -1,0 +1,244 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #3B44C3;
+    width: 100vw;
+    height: 100vh;
+}
+
+h1{
+    font-family: "Poppins";
+    color: #FFF;
+    font-size: 2.6rem;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    place-items: center;
+    justify-content: space-around;
+    height: 100%;
+    margin: 0;
+    padding: 10px;
+}
+
+.avatar{
+    max-width: 220px;
+    border-radius: 15px;
+}
+
+.escolher_avatar{
+    min-width: 220px;
+    min-height: 50px;
+    border-radius: 10px;
+    border-color: transparent;
+    background-color: #FFF;
+    color: black;
+    font-size: 1.4rem;
+    font-family: "Poppins";
+    cursor: pointer;
+    transition: 600ms ease-in;
+}
+
+.escolher_avatar:hover{
+    border-radius: 20px;
+    background-color: rgb(221, 221, 221);
+}
+
+span{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Poppins";
+    color: #FFF;
+    font-size: calc(1rem + 1vw);
+    line-height: 47px;
+    place-items: center;
+}
+
+label{
+    margin-right: 10px;
+}
+
+input{
+    background-color: transparent;
+    color: white;
+    font-family: "Poppins";
+    max-width: max-content;
+    font-size: calc(1rem + 1vw);
+    border: none;
+    margin-right: 10px;
+}
+
+input::placeholder{
+    color: rgb(231, 231, 231);
+    font-size: 1.2rem;
+}
+
+.alterar{
+    max-width: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.confirma{
+    position: relative;
+    min-width: 30px;
+    min-height: 30px;
+    border-color: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(0, 255, 0);
+    margin-right: 20px;
+    display: none;
+}
+
+.confirma::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/tela Configurações do Perfil/confirma.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(0) invert(1) brightness(1);
+    mix-blend-mode: screen;
+}
+
+.cancelar{
+    position: relative;
+    min-width: 30px;
+    min-height: 30px;
+    border-color: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(255, 0, 0);
+    display: none;
+}
+
+.cancelar::after{
+    content: '';
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    width: 80%;
+    height: 80%;
+    background-image: url("../img/tela Configurações do Perfil/deletar.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(0) invert(1) brightness(1);
+    mix-blend-mode: screen;
+}
+
+.direita{
+    text-align: right;
+    margin-right: 20px;
+}
+
+.sair{
+    filter: invert(1);
+    max-width: 50px;
+    transition: 900ms ease;
+}
+
+.sair:hover{
+    cursor: pointer;
+    transform: scale(0.8);
+    opacity: 1;
+}
+
+.aviso{
+    display: none;
+    font-family: "Poppins";
+    color: #FFF;
+    font-size: 1.1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+h2{
+    color: #000000;
+    font-family: "Poppins";
+    text-align: center;
+}
+
+/* MEXE AQUI DEPOIS DELÍCIA */
+.container_avatar{
+    display: none;
+    background-color: #ffffff;
+    position: relative;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 2;
+    width: (1rem + 1vw);
+    height: max-content;
+    opacity: 1;
+}
+
+.flex_avatar{
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 200px;
+    max-width: 600px;
+    margin-left: 25px;
+    justify-content: left;
+}
+
+.organizar{
+    text-align: center;
+}
+
+.avatar_icon {
+    border-radius: 5px;
+    margin: 10px;
+    max-width: calc(2.5rem + 1vw);
+    opacity: 1; 
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.avatar_icon.selected {
+    opacity: 0.6; 
+}
+
+.avatar_botao{
+    max-width: 600px;
+    place-items: center;
+    justify-content: space-evenly;
+}
+
+.confirma_avatar, .cancelar_avatar{
+    min-width: 170px;
+    min-height: 40px;
+    font-family: "Poppins";
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    border-color: transparent;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    margin: 5px;
+}
+
+.confirma_avatar:hover, .cancelar_avatar:hover{
+    opacity: 0.8;
+}
+
+.confirma_avatar{
+    background-color: #3943d3;
+}
+
+.cancelar_avatar{
+    background-color: #202569;
+}
+
+#aviso2{
+    display: block;
+    opacity: 1;
+    font-size: calc(0.5rem + 0.5vw);
+}
